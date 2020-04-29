@@ -1,9 +1,3 @@
-var counts = [50, 40, 27, 36, 34, 24, 21, 4, 31, 24, 22, 25, 29, 36, 10, 13, 10, 42, 150, 31, 12, 8, 66, 52, 5, 48, 12, 14, 3, 9, 1, 4, 7, 3, 3, 3, 2, 14, 4, 28, 16, 24, 21, 28, 16, 16, 13, 6, 6, 4, 4, 5, 3, 6, 4, 3, 1, 13, 5, 5, 3, 5, 1, 1, 1, 22]
-var languages = [
-	{"lang": "English","option":"en",
-	"names":["Genesis","Exodus","Leviticus", "Numbers", "Deuteronomy", "Joshua", "Judges", "Ruth", "1 Samuel", "2 Samuel", "1 Kings", "2 Kings", "1 Chronicles", "2 Chronicles", "Ezra", "Nehemiah", "Esther", "Job", "Psalms", "Proverbs", "Ecclesiastes", "Song of Solomon", "Isaiah", "Jeremiah", "Lamentations", "Ezekiel", "Daniel", "Hosea", "Joel", "Amos", "Obadiah", "Jonah", "Micah", "Nahum", "Habakkuk", "Zephaniah", "Haggai", "Zechariah", "Malachi", "Matthew", "Mark", "Luke", "John", "Acts", "Romans", "1 Corinthians", "2 Corinthians", "Galatians", "Ephesians", "Philippians", "Colossians", "1 Thessalonians", "2 Thessalonians", "1 Timothy", "2 Timothy", "Titus", "Philemon", "Hebrews", "James", "1 Peter", "2 Peter", "1 John", "2 John", "3 John", "Jude", "Revelation"],
-	"link":"https://wol.jw.org/en/wol/b/r1/lp-e/nwtsty/"}]
-
 var mode = "cr";
 var lang = 0
 var book = 1
@@ -56,14 +50,54 @@ function onGenClick(){
 	document.querySelector("#link").innerText = n;
 }
 
-function onLangsChange(){
+function onModeChange(){
 	var e = document.querySelector("#mode")
 	mode = e.options[e.selectedIndex].value;
 }
 
+function onLangsChange() {
+	var langs = document.querySelector("#langs");
+	for(var i = 0; i<languages.length;i++){
+		if(languages[i].option==langs.options[langs.selectedIndex].value){
+			lang = i;
+			return;
+		}
+	}
+}
+
+function populateLangs(){
+	var langs = document.querySelector("#langs");
+	langs.textContent = '';
+	for(var i = 0; i<languages.length;i++){
+		var item = document.createElement("option");
+		item.text = languages[i].lang;
+		item.value = languages[i].option;
+		item.selected = languages[i].option == defaultLang;
+		langs.add(item);
+	}
+}
+
 function bodyLoad(){
+	populateLangs();
 	document.querySelector("#gen").addEventListener("click", onGenClick);
 	document.querySelector("#langs").addEventListener("change", onLangsChange);
+	document.querySelector("#mode").addEventListener("change", onModeChange);
 	onLangsChange();
+	onModeChange();
 	onGenClick();
 }
+
+var defaultLang = "en"
+var counts = [50, 40, 27, 36, 34, 24, 21, 4, 31, 24, 22, 25, 29, 36, 10, 13, 10, 42, 150, 31, 12, 8, 66, 52, 5, 48, 12, 14, 3, 9, 1, 4, 7, 3, 3, 3, 2, 14, 4, 28, 16, 24, 21, 28, 16, 16, 13, 6, 6, 4, 4, 5, 3, 6, 4, 3, 1, 13, 5, 5, 3, 5, 1, 1, 1, 22]
+var languages = [
+	{"lang": "English","option":"en",
+	"names":["Genesis","Exodus","Leviticus", "Numbers", "Deuteronomy", "Joshua", "Judges", "Ruth", "1 Samuel", "2 Samuel", "1 Kings", "2 Kings", "1 Chronicles", "2 Chronicles", "Ezra", "Nehemiah", "Esther", "Job", "Psalms", "Proverbs", "Ecclesiastes", "Song of Solomon", "Isaiah", "Jeremiah", "Lamentations", "Ezekiel", "Daniel", "Hosea", "Joel", "Amos", "Obadiah", "Jonah", "Micah", "Nahum", "Habakkuk", "Zephaniah", "Haggai", "Zechariah", "Malachi",
+	"Matthew", "Mark", "Luke", "John", "Acts", "Romans", "1 Corinthians", "2 Corinthians", "Galatians", "Ephesians", "Philippians", "Colossians", "1 Thessalonians", "2 Thessalonians", "1 Timothy", "2 Timothy", "Titus", "Philemon", "Hebrews", "James", "1 Peter", "2 Peter", "1 John", "2 John", "3 John", "Jude", "Revelation"],
+	"link":"https://wol.jw.org/en/wol/b/r1/lp-e/nwtsty/"},
+	
+	{"lang": "Russian", "option": "ru",
+	"names": ["Бытие","Исход","Левит","Числа","Второзаконие","Иисус Навин","Судей","Руфь","1 Самуила","2 Самуила","1 Царей","2 Царей","1 Летопись","2 Летопись","Ездра","Неемия","Эсфирь","Иов","Псалмы","Притчи","Экклезиаст","Песнь песней","Исаия","Иеремия","Плач Иеремии","Иезекииль","Даниил","Осия","Иоиль","Амос","Авдий","Иона","Михей","Наум","Аввакум","Софония","Аггей","Захария","Малахия",
+	"Матфея","Марка","Луки","Иоанна","Деяния","Римлянам","1 Коринфянам","2 Коринфянам","Галатам","Эфесянам","Филиппийцам","Колоссянам","1 Фессалоникийцам","2 Фессалоникийцам","1 Тимофею","2 Тимофею","Титу","Филимону","Евреям","Иакова","1 Петра","2 Петра","1 Иоанна","2 Иоанна","3 Иоанна","Иуды","Откровение"],
+	"link": "https://wol.jw.org/ru/wol/b/r2/lp-u/bi12/"},
+	]
+	
