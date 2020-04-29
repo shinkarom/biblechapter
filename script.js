@@ -7,22 +7,26 @@ function randomInt(minn, maxn) {
 	return Math.floor(Math.random()*(maxn-minn))+minn;
 }
 
+function genBook(){
+	book = randomInt(0, chapters.length)+1;
+}
+
 function genChapterFromRandomBook(){
-	book = randomInt(0, counts.length)+1;
-	chapter = randomInt(0, counts[book-1])+1;
+	genBook();
+	chapter = randomInt(0, chapters[book-1])+1;
 }
 
 function genChapterProportionally(){
 	var total = 0;
-	for(var i = 0;i<counts.length;i++){ total += counts[i];}
+	for(var i = 0;i<chapters.length;i++){ total += chapters[i];}
 	var r = randomInt(0, total);
-	for(var i = 0;i<counts.length;i++ ) {
-		if(r < counts[i]){
+	for(var i = 0;i<chapters.length;i++ ) {
+		if(r < chapters[i]){
 			book = i + 1;
 			chapter = r + 1;
 			break;
 		} else
-			r -= counts[i];
+			r -= chapters[i];
 	}
 }
 
@@ -34,6 +38,9 @@ function generate(){
 		case "cp":
 			genChapterProportionally();
 			break;
+		case "b":
+			genBook();
+			break;
 		default:
 			break;
 	}
@@ -41,12 +48,20 @@ function generate(){
 
 function onGenClick(){
 	generate()
-	var link = languages[lang].link;
-	link += book;
-	link += "/";
-	link += chapter;
+	var link, n
+	if(mode=="b"){
+		link = languages[lang].blink;
+		link += book;
+		n = languages[lang].names[book-1];		
+	} else {
+		link = languages[lang].clink;
+		link += book;
+		n = languages[lang].names[book-1];
+		link += "/";
+		link += chapter;		
+		n += " " + chapter;		
+	}
 	document.querySelector("#link").href = link;
-	var n = languages[lang].names[book-1] + " " + chapter;
 	document.querySelector("#link").innerText = n;
 }
 
@@ -88,16 +103,83 @@ function bodyLoad(){
 }
 
 var defaultLang = "en"
-var counts = [50, 40, 27, 36, 34, 24, 21, 4, 31, 24, 22, 25, 29, 36, 10, 13, 10, 42, 150, 31, 12, 8, 66, 52, 5, 48, 12, 14, 3, 9, 1, 4, 7, 3, 3, 3, 2, 14, 4, 28, 16, 24, 21, 28, 16, 16, 13, 6, 6, 4, 4, 5, 3, 6, 4, 3, 1, 13, 5, 5, 3, 5, 1, 1, 1, 22]
+var chapters = [
+	50, //Genesis
+	40, //Exodus
+	27, //Leviticus
+	36, //Numbers
+	34, //Deuteronomy
+	24, //Joshua
+	21, //Judges
+	4, //Ruth
+	31, //1 Samuel
+	24, //2 Samuel
+	22, //1 Kings
+	25, //2 Kings
+	29, //1 Chronicles
+	36, //2 Chronicles
+	10, //Ezra
+	13, //Nehemiah
+	10, //Esther
+	42, //Job
+	150, //Psalms
+	31, //Proverbs
+	12, //Ecclesiastes
+	8, //Song of Solomon
+	66, //Isaiah
+	52, //Jeremiah
+	5, //Lamentations
+	48, //Ezekiel
+	12, //Daniel
+	14, //Hosea
+	3, //Joel
+	9, //Amos
+	1, //Obadiah
+	4, //Jonah
+	7, //Micah
+	3, //Nahum
+	3, //Habakkuk
+	3, //Zephaniah
+	2, //Haggai
+	14, //Zechariah
+	4, //Malachi
+	28, //Matthew
+	16, //Mark
+	24, //Luke
+	21, //John
+	28, //Acts
+	16, //Romans
+	16, //1 Corinthians
+	13, //2 Corinthians
+	6, //Galatians
+	6, //Ephesians
+	4, //Philippians
+	4, //Colossians
+	5, //1 Thessalonians
+	3, //2 Thessalonians
+	6, //1 Timothy
+	4, //2 Timothy
+	3, //Titus
+	1, //Philemon
+	13, //Hebrews
+	5, //James
+	5, //1 Peter
+	3, //2 Peter
+	5, //1 John
+	1, //2 John
+	1, //3 John
+	1, //Jude
+	22 //Revelation
+	]
 var languages = [
 	{"lang": "English","option":"en",
 	"names":["Genesis","Exodus","Leviticus", "Numbers", "Deuteronomy", "Joshua", "Judges", "Ruth", "1 Samuel", "2 Samuel", "1 Kings", "2 Kings", "1 Chronicles", "2 Chronicles", "Ezra", "Nehemiah", "Esther", "Job", "Psalms", "Proverbs", "Ecclesiastes", "Song of Solomon", "Isaiah", "Jeremiah", "Lamentations", "Ezekiel", "Daniel", "Hosea", "Joel", "Amos", "Obadiah", "Jonah", "Micah", "Nahum", "Habakkuk", "Zephaniah", "Haggai", "Zechariah", "Malachi",
-	"Matthew", "Mark", "Luke", "John", "Acts", "Romans", "1 Corinthians", "2 Corinthians", "Galatians", "Ephesians", "Philippians", "Colossians", "1 Thessalonians", "2 Thessalonians", "1 Timothy", "2 Timothy", "Titus", "Philemon", "Hebrews", "James", "1 Peter", "2 Peter", "1 John", "2 John", "3 John", "Jude", "Revelation"],
-	"link":"https://wol.jw.org/en/wol/b/r1/lp-e/nwtsty/"},
+	"Matthew", "Mark", "Luke", "John", "Acts", "Romans", "1 Corinthians", "2 Corinthians", "Galatians", "Ephesians", "Philippians", "Colossians", "1 Thessalonians", "2 Thessalonians", "1 Timothy", "2 Timothy", "Titus", "Philemon", "Hebrews", "James", "1 Peter", "2 Peter", "1 John", "2 John", "3 John", "Jude", "Revelation"],	
+	"blink":"https://wol.jw.org/en/wol/binav/r1/lp-e/nwtsty/","clink":"https://wol.jw.org/en/wol/b/r1/lp-e/nwtsty/"},
 	
 	{"lang": "Russian", "option": "ru",
 	"names": ["Бытие","Исход","Левит","Числа","Второзаконие","Иисус Навин","Судей","Руфь","1 Самуила","2 Самуила","1 Царей","2 Царей","1 Летопись","2 Летопись","Ездра","Неемия","Эсфирь","Иов","Псалмы","Притчи","Экклезиаст","Песнь песней","Исаия","Иеремия","Плач Иеремии","Иезекииль","Даниил","Осия","Иоиль","Амос","Авдий","Иона","Михей","Наум","Аввакум","Софония","Аггей","Захария","Малахия",
 	"Матфея","Марка","Луки","Иоанна","Деяния","Римлянам","1 Коринфянам","2 Коринфянам","Галатам","Эфесянам","Филиппийцам","Колоссянам","1 Фессалоникийцам","2 Фессалоникийцам","1 Тимофею","2 Тимофею","Титу","Филимону","Евреям","Иакова","1 Петра","2 Петра","1 Иоанна","2 Иоанна","3 Иоанна","Иуды","Откровение"],
-	"link": "https://wol.jw.org/ru/wol/b/r2/lp-u/bi12/"},
+	"blink":"https://wol.jw.org/ru/wol/binav/r2/lp-u/bi12/","clink": "https://wol.jw.org/ru/wol/b/r2/lp-u/bi12/"},
 	]
 	
