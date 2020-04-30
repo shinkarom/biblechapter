@@ -94,21 +94,17 @@ function select(){
 function onSelClick(){
 	select()
 	var link, n
-	if(mode=="b"){
-		link = languages[lang].blink;
-		link += book;
-		n = languages[lang].names[book-1];		
-	} else {
-		link = languages[lang].clink;
-		link += book;
-		n = languages[lang].names[book-1];
-		link += "/";
-		link += chapter;		
+	link = languages[lang].slink;
+	if(mode=="b") link+="inav";
+	link+=languages[lang].elink + book;
+	n = languages[lang].names[book-1];	
+	if(mode!="b"){
+		link += "/" + chapter;		
 		n += " " + chapter;		
 		if((mode=="v")||(mode=="vb")||(mode=="vc")){
 			link += "#v=" + book + ":" + chapter + ":" + verse;
 			n += ":" + verse;
-		}
+		}		
 	}
 	document.querySelector("#link").href = link;
 	document.querySelector("#link").innerText = n;
@@ -327,14 +323,25 @@ var chapters = [
 	 27, 21] //Revelation
 	]
 var languages = [
-	{"lang": "English","option":"en",
+	{
+	"lang": "English","option":"en","code":"e",
 	"names":["Genesis","Exodus","Leviticus", "Numbers", "Deuteronomy", "Joshua", "Judges", "Ruth", "1 Samuel", "2 Samuel", "1 Kings", "2 Kings", "1 Chronicles", "2 Chronicles", "Ezra", "Nehemiah", "Esther", "Job", "Psalms", "Proverbs", "Ecclesiastes", "Song of Solomon", "Isaiah", "Jeremiah", "Lamentations", "Ezekiel", "Daniel", "Hosea", "Joel", "Amos", "Obadiah", "Jonah", "Micah", "Nahum", "Habakkuk", "Zephaniah", "Haggai", "Zechariah", "Malachi",
 	"Matthew", "Mark", "Luke", "John", "Acts", "Romans", "1 Corinthians", "2 Corinthians", "Galatians", "Ephesians", "Philippians", "Colossians", "1 Thessalonians", "2 Thessalonians", "1 Timothy", "2 Timothy", "Titus", "Philemon", "Hebrews", "James", "1 Peter", "2 Peter", "1 John", "2 John", "3 John", "Jude", "Revelation"],	
-	"blink":"https://wol.jw.org/en/wol/binav/r1/lp-e/nwtsty/","clink":"https://wol.jw.org/en/wol/b/r1/lp-e/nwtsty/"},
+	"slink":"https://wol.jw.org/en/wol/b", "elink":"/r1/lp-e/nwtsty/"
+	},
 	
-	{"lang": "Russian", "option": "ru",
+	{
+	"lang": "Japanese", "option":"ja","code":"j",
+	"names": ["創世", "出エジプト", "レビ", "民数", "申命", "ヨシュア", "裁き人", "ルツ", "サムエル第一", "サムエル第二", "列王第一", "列王第二", "歴代第一", "歴代第二", "エズラ", "ネヘミヤ", "エステル", "ヨブ", "詩編", "格言", "伝道", "ソロモンの歌", "イザヤ", "エレミヤ", "哀歌", "エゼキエル", "ダニエル", "ホセア", "ヨエル", "アモス", "オバデヤ", "ヨナ", "ミカ", "ナホム", "ハバクク", "ゼパニヤ", "ハガイ", "ゼカリヤ", "マラキ", 
+    "マタイ", "マルコ", "ルカ", "ヨハネ", "使徒", "ローマ", "コリント第一", "コリント第二", "ガラテア", "エフェソス", "フィリピ", "コロサイ", "テサロニケ第一", "テサロニケ第二", "テモテ第一", "テモテ第二", "テトス", "フィレモン", "ヘブライ", "ヤコブ", "ペテロ第一", "ペテロ第二", "ヨハネ第一", "ヨハネ第二", "ヨハネ第三", "ユダ", "啓示"],
+	"slink":"https://wol.jw.org/ja/wol/b","elink":"/r7/lp-j/nwtsty/"
+	},
+	
+	{
+	"lang": "Russian", "option": "ru","code":"u",
 	"names": ["Бытие","Исход","Левит","Числа","Второзаконие","Иисус Навин","Судей","Руфь","1 Самуила","2 Самуила","1 Царей","2 Царей","1 Летопись","2 Летопись","Ездра","Неемия","Эсфирь","Иов","Псалмы","Притчи","Экклезиаст","Песнь песней","Исаия","Иеремия","Плач Иеремии","Иезекииль","Даниил","Осия","Иоиль","Амос","Авдий","Иона","Михей","Наум","Аввакум","Софония","Аггей","Захария","Малахия",
 	"Матфея","Марка","Луки","Иоанна","Деяния","Римлянам","1 Коринфянам","2 Коринфянам","Галатам","Эфесянам","Филиппийцам","Колоссянам","1 Фессалоникийцам","2 Фессалоникийцам","1 Тимофею","2 Тимофею","Титу","Филимону","Евреям","Иакова","1 Петра","2 Петра","1 Иоанна","2 Иоанна","3 Иоанна","Иуды","Откровение"],
-	"blink":"https://wol.jw.org/ru/wol/binav/r2/lp-u/bi12/","clink": "https://wol.jw.org/ru/wol/b/r2/lp-u/bi12/"},
+	"slink":"https://wol.jw.org/ru/wol/b","elink":"/r2/lp-u/bi12/"
+	},
 	]
 	
