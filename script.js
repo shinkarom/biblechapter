@@ -8,16 +8,16 @@ function randomInt(minn, maxn) {
 	return Math.floor(Math.random()*(maxn-minn))+minn;
 }
 
-function genBook(){
+function selBook(){
 	book = randomInt(0, chapters.length)+1;
 }
 
-function genChapterFromBook(){
-	genBook();
+function selChapterFromBook(){
+	selBook();
 	chapter = randomInt(0, chapters[book-1].length)+1;
 }
 
-function genChapter(){
+function selChapter(){
 	var r = randomInt(0, chapterTotal);
 	for(var i = 0;i<chapters.length;i++) {
 		if(r < chapters[i].length){
@@ -29,7 +29,7 @@ function genChapter(){
 	}
 }
 
-function genVerse(){
+function selVerse(){
 	var r = randomInt(0, verseTotal);
 	for(var i = 0;i < chapters.length;i++) {
 		for(var j = 0; j < chapters[i].length; j++) {
@@ -45,8 +45,8 @@ function genVerse(){
 	}
 }
 
-function genVerseFromBook(){
-	genBook();
+function selVerseFromBook(){
+	selBook();
 	var total = 0;
 	for(var i = 0;i<chapters[book-1].length;i++){ total += chapters[book-1][i];}
 	var r = randomInt(0, total);
@@ -60,39 +60,39 @@ function genVerseFromBook(){
 	}	
 }
 
-function genVerseFromChapter(){
-	genChapter();
+function selVerseFromChapter(){
+	selChapter();
 	var count = chapters[book-1][chapter-1];
 	verse = randomInt(0, count)+1;
 }
 
-function generate(){
+function select(){
 	switch(mode){
 		case "cb":
-			genChapterFromBook();
+			selChapterFromBook();
 			break;
 		case "c":
-			genChapter();
+			selChapter();
 			break;
 		case "b":
-			genBook();
+			selBook();
 			break;
 		case "vb":
-			genVerseFromBook();
+			selVerseFromBook();
 			break;
 		case "vc":
-			genVerseFromChapter();
+			selVerseFromChapter();
 			break;
 		case "v":
-			genVerse();
+			selVerse();
 			break;
 		default:
 			break;
 	}
 }
 
-function onGenClick(){
-	generate()
+function onSelClick(){
+	select()
 	var link, n
 	if(mode=="b"){
 		link = languages[lang].blink;
@@ -117,7 +117,7 @@ function onGenClick(){
 function onModeChange(){
 	var e = document.querySelector("#mode")
 	mode = e.options[e.selectedIndex].value;
-	onGenClick();
+	onSelClick();
 }
 
 function onLangsChange() {
@@ -125,7 +125,7 @@ function onLangsChange() {
 	for(var i = 0; i<languages.length;i++){
 		if(languages[i].option==langs.options[langs.selectedIndex].value){
 			lang = i;
-			onGenClick();
+			onSelClick();
 			return;
 		}
 	}
@@ -160,7 +160,7 @@ function calculateTotals() {
 function bodyLoad(){
 	populateLangs();
 	calculateTotals();
-	document.querySelector("#gen").addEventListener("click", onGenClick);
+	document.querySelector("#sel").addEventListener("click", onSelClick);
 	document.querySelector("#langs").addEventListener("change", onLangsChange);
 	document.querySelector("#mode").addEventListener("change", onModeChange);
 	onLangsChange();
