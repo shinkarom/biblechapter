@@ -361,6 +361,20 @@ var languages = [
 	},
 	
 	{
+	"lang": "Dutch", "option": "nl",
+	"names": ["Genesis", "Exodus", "Leviticus", "Numeri", "Deuteronomium", "Jozua", "Rechters", "Ruth", "1 Samuël", "2 Samuël", "1", "Koningen", "2 Koningen", "1 Kronieken", "2 Kronieken", "Ezra", "Nehemia", "Esther", "Job", "Psalmen", "Spreuken", "Prediker", "Hooglied", "Jesaja", "Jeremia", "Klaagliederen", "Ezechiël", "Daniël", "Hosea", "Joël", "Amos", "Obadja", "Jona", "Micha", "Nahum", "Habakuk", "Zefanja", "Haggaï", "Zacharia", "Maleachi", 
+	"Mattheüs", "Markus", "Lukas", "Johannes", "Handelingen", "Romeinen", "1 Korinthiërs", "2 Korinthiërs", "Galaten", "Efeziërs", "Filippenzen", "Kolossenzen", "1 Thessalonicenzen", "2 Thessalonicenzen", "1 Timotheüs", "2 Timotheüs", "Titus", "Filemon", "Hebreeën", "Jakobus", "1 Petrus", "2 Petrus", "1 Johannes", "2 Johannes", "3 Johannes", "Judas", "Openbaring"],
+	"elink": "/r18/lp-o/nwtsty/"
+	},
+	
+	{
+	"lang": "Italian", "option": "it",
+	"names": ["Genesi", "Esodo", "Levitico", "Numeri", "Deuteronomio", "Giosuè", "Giudici", "Rut", "1 Samuele", "2 Samuele", "1 Re", "2 Re", "1 Cronache", "2 Cronache", "Esdra", "Neemia", "Ester", "Giobbe", "Salmi", "Proverbi", "Ecclesiaste", "Cantico", "dei Cantici", "Isaia", "Geremia", "Lamentazioni", "Ezechiele", "Daniele", "Osea", "Gioele", "Amos", "Abdia", "Giona", "Michea", "Naum", "Abacuc", "Sofonia", "Aggeo", "Zaccaria", "Malachia", 
+	"Matteo", "Marco", "Luca", "Giovanni", "Atti", "Romani", "1 Corinti", "2 Corinti", "Galati", "Efesini", "Filippesi", "Colossesi", "1 Tessalonicesi", "2 Tessalonicesi", "1 Timoteo", "2 Timoteo", "Tito", "Filemone", "Ebrei", "Giacomo", "1 Pietro", "2 Pietro", "1 Giovanni", "2 Giovanni", "3", "Giovanni", "Giuda", "Rivelazione",],
+	"elink": "/r6/lp-i/nwtsty/"
+	},
+	
+	{
 	"lang": "Japanese", "option":"ja",
 	"names": ["創世", "出エジプト", "レビ", "民数", "申命", "ヨシュア", "裁き人", "ルツ", "サムエル第一", "サムエル第二", "列王第一", "列王第二", "歴代第一", "歴代第二", "エズラ", "ネヘミヤ", "エステル", "ヨブ", "詩編", "格言", "伝道", "ソロモンの歌", "イザヤ", "エレミヤ", "哀歌", "エゼキエル", "ダニエル", "ホセア", "ヨエル", "アモス", "オバデヤ", "ヨナ", "ミカ", "ナホム", "ハバクク", "ゼパニヤ", "ハガイ", "ゼカリヤ", "マラキ", 
     "マタイ", "マルコ", "ルカ", "ヨハネ", "使徒", "ローマ", "コリント第一", "コリント第二", "ガラテア", "エフェソス", "フィリピ", "コロサイ", "テサロニケ第一", "テサロニケ第二", "テモテ第一", "テモテ第二", "テトス", "フィレモン", "ヘブライ", "ヤコブ", "ペテロ第一", "ペテロ第二", "ヨハネ第一", "ヨハネ第二", "ヨハネ第三", "ユダ", "啓示"],
@@ -373,6 +387,13 @@ var languages = [
     "Mateusza", "Marka", "Łukasza", "Jana", "Dzieje", "Rzymian", "1 Koryntian", "2 Koryntian", "Galatów", "Efezjan", "Filipian", "Kolosan", "1 Tesaloniczan", "2 Tesaloniczan", "1 Tymoteusza", "2 Tymoteusza", "Tytusa", "Filemona", "Hebrajczyków", "Jakuba", "1 Piotra", "2 Piotra", "1 Jana", "2 Jana", "3 Jana", "Judy", "Objawienie"],
 	"elink":"/r12/lp-p/nwtsty/"
 	},
+	
+	{
+	"lang": "Portuguese", "option": "pt",
+	"names": ["Gênesis", "Êxodo", "Levítico", "Números", "Deuteronômio", "Josué", "Juízes", "Rute", "1 Samuel", "2 Samuel", "1 Reis", "2 Reis", "1 Crônicas", "2 Crônicas", "Esdras", "Neemias", "Ester", "Jó", "Salmos", "Provérbios", "Eclesiastes", "Cântico de Salomão", "Isaías", "Jeremias", "Lamentações", "Ezequiel", "Daniel", "Oseias", "Joel", "Amós", "Obadias", "Jonas", "Miqueias", "Naum", "Habacuque", "Sofonias", "Ageu", "Zacarias", "Malaquias", 
+	"Mateus", "Marcos", "Lucas", "João", "Atos", "Romanos", "1 Coríntios", "2 Coríntios", "Gálatas", "Efésios", "Filipenses", "Colossenses", "1 Tessalonicenses", "2 Tessalonicenses", "1 Timóteo", "2 Timóteo", "Tito", "Filêmon", "Hebreus", "Tiago", "1 Pedro", "2 Pedro", "1 João", "2", "João", "3 João", "Judas", "Apocalipse"],
+	"elink": "/r5/lp-t/nwtsty/"
+	},	
 	
 	{
 	"lang": "Russian", "option": "ru",
