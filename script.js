@@ -66,6 +66,11 @@ function selVerseFromChapter(){
 	verse = randomInt(0, count)+1;
 }
 
+function selVerseFromChapterOfBook(){
+	selChapterFromBook();
+	verse = randomInt(1, chapters[book-1][chapter-1]);
+}
+
 function select(){
 	switch(mode){
 		case "cb":
@@ -76,6 +81,9 @@ function select(){
 			break;
 		case "b":
 			selBook();
+			break;
+		case "vr":
+			selVerseFromChapterOfBook();
 			break;
 		case "vb":
 			selVerseFromBook();
@@ -101,7 +109,7 @@ function onSelClick(){
 	if(mode!="b"){
 		link += "/" + chapter;		
 		n += " " + chapter;		
-		if((mode=="v")||(mode=="vb")||(mode=="vc")){
+		if((mode=="v")||(mode=="vb")||(mode=="vc")||(mode=="vr")){
 			link += "#v=" + book + ":" + chapter + ":" + verse;
 			n += ":" + verse;
 		}		
