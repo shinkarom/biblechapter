@@ -348,6 +348,13 @@ var languages = [
 	},
 	
 	{
+	"lang": "Danish", "option": "da",
+	"names": ["1. Mosebog", "2. Mosebog", "3. Mosebog", "4. Mosebog", "5. Mosebog", "Josva", "Dommerne", "Ruth", "1. Samuel", "2. Samuel", "1. Kongebog", "2. Kongebog", "1. Krønikebog", "2. Krønikebog", "Ezra", "Nehemias", "Ester", "Job", "Salmerne", "Ordsprogene", "Prædikeren", "Højsangen", "Esajas", "Jeremias", "Klagesangene", "Ezekiel", "Daniel", "Hoseas", "Joel", "Amos", "Obadias", "Jonas", "Mika", "Nahum", "Habakkuk", "Sefanias", "Haggaj", "Zakarias", "Malakias", 
+	"Matthæus", "Markus", "Lukas", "Johannes", "Apostlenes Gerninger", "Romerne", "1. Korinther", "2. Korinther", "Galaterne", "Efeserne", "Filipperne", "Kolossenserne", "1. Thessaloniker", "2. Thessaloniker", "1. Timotheus", "2. Timotheus", "Titus", "Filemon", "Hebræerne", "Jakob", "1. Peter", "2. Peter", "1. Johannes", "2. Johannes", "3. Johannes", "Judas", "Åbenbaringen", ],
+	"elink": "/r9/lp-d/nwtsty/"
+	},
+	
+	{
 	"lang": "English","option":"en",
 	"names":["Genesis","Exodus","Leviticus", "Numbers", "Deuteronomy", "Joshua", "Judges", "Ruth", "1 Samuel", "2 Samuel", "1 Kings", "2 Kings", "1 Chronicles", "2 Chronicles", "Ezra", "Nehemiah", "Esther", "Job", "Psalms", "Proverbs", "Ecclesiastes", "Song of Solomon", "Isaiah", "Jeremiah", "Lamentations", "Ezekiel", "Daniel", "Hosea", "Joel", "Amos", "Obadiah", "Jonah", "Micah", "Nahum", "Habakkuk", "Zephaniah", "Haggai", "Zechariah", "Malachi",
 	"Matthew", "Mark", "Luke", "John", "Acts", "Romans", "1 Corinthians", "2 Corinthians", "Galatians", "Ephesians", "Philippians", "Colossians", "1 Thessalonians", "2 Thessalonians", "1 Timothy", "2 Timothy", "Titus", "Philemon", "Hebrews", "James", "1 Peter", "2 Peter", "1 John", "2 John", "3 John", "Jude", "Revelation"],	
@@ -370,7 +377,7 @@ var languages = [
 	
 	{
 	"lang": "Dutch", "option": "nl",
-	"names": ["Genesis", "Exodus", "Leviticus", "Numeri", "Deuteronomium", "Jozua", "Rechters", "Ruth", "1 Samuël", "2 Samuël", "1", "Koningen", "2 Koningen", "1 Kronieken", "2 Kronieken", "Ezra", "Nehemia", "Esther", "Job", "Psalmen", "Spreuken", "Prediker", "Hooglied", "Jesaja", "Jeremia", "Klaagliederen", "Ezechiël", "Daniël", "Hosea", "Joël", "Amos", "Obadja", "Jona", "Micha", "Nahum", "Habakuk", "Zefanja", "Haggaï", "Zacharia", "Maleachi", 
+	"names": ["Genesis", "Exodus", "Leviticus", "Numeri", "Deuteronomium", "Jozua", "Rechters", "Ruth", "1 Samuël", "2 Samuël", "1 Koningen", "2 Koningen", "1 Kronieken", "2 Kronieken", "Ezra", "Nehemia", "Esther", "Job", "Psalmen", "Spreuken", "Prediker", "Hooglied", "Jesaja", "Jeremia", "Klaagliederen", "Ezechiël", "Daniël", "Hosea", "Joël", "Amos", "Obadja", "Jona", "Micha", "Nahum", "Habakuk", "Zefanja", "Haggaï", "Zacharia", "Maleachi", 
 	"Mattheüs", "Markus", "Lukas", "Johannes", "Handelingen", "Romeinen", "1 Korinthiërs", "2 Korinthiërs", "Galaten", "Efeziërs", "Filippenzen", "Kolossenzen", "1 Thessalonicenzen", "2 Thessalonicenzen", "1 Timotheüs", "2 Timotheüs", "Titus", "Filemon", "Hebreeën", "Jakobus", "1 Petrus", "2 Petrus", "1 Johannes", "2 Johannes", "3 Johannes", "Judas", "Openbaring"],
 	"elink": "/r18/lp-o/nwtsty/"
 	},
@@ -388,6 +395,13 @@ var languages = [
     "マタイ", "マルコ", "ルカ", "ヨハネ", "使徒", "ローマ", "コリント第一", "コリント第二", "ガラテア", "エフェソス", "フィリピ", "コロサイ", "テサロニケ第一", "テサロニケ第二", "テモテ第一", "テモテ第二", "テトス", "フィレモン", "ヘブライ", "ヤコブ", "ペテロ第一", "ペテロ第二", "ヨハネ第一", "ヨハネ第二", "ヨハネ第三", "ユダ", "啓示"],
 	"elink":"/r7/lp-j/nwtsty/"
 	},
+	
+	{
+	"lang": "Norwegian", "option": "no",
+	"names": ["1. Mosebok", "2. Mosebok", "3. Mosebok", "4. Mosebok", "5. Mosebok", "Josva", "Dommerne", "Rut", "1. Samuelsbok", "2. Samuelsbok", "1. Kongebok", "2. Kongebok", "1. Krønikebok", "2. Krønikebok", "Esra", "Nehemja", "Ester", "Job", "Salmene", "Ordspråkene", "Forkynneren", "Høysangen", "Jesaja", "Jeremia", "Klagesangene", "Esekiel", "Daniel", "Hosea", "Joel", "Amos", "Obadja", "Jona", "Mika", "Nahum", "Habakkuk", "Sefanja", "Haggai", "Sakarja", "Malaki", 
+	"Matteus", "Markus", "Lukas", "Johannes", "Apostlenes gjerninger", "Romerne", "1. Korinter", "2. Korinter", "Galaterne", "Efeserne", "Filipperne", "Kolosserne", "1. Tessaloniker", "2. Tessaloniker", "1. Timoteus", "2. Timoteus", "Titus", "Filemon", "Hebreerne", "Jakob", "1. Peter", "2. Peter", "1. Johannes", "2. Johannes", "3. Johannes", "Judas", "Åpenbaringen", ],
+	"elink": "/r3/lp-n/nwtsty/"
+	},	
 	
 	{
 	"lang":"Polish", "option":"pl",
@@ -415,6 +429,13 @@ var languages = [
 	"names": ["Génesis", "Éxodo", "Levítico", "Números", "Deuteronomio", "Josué", "Jueces", "Rut", "1 Samuel", "2 Samuel", "1 Reyes", "2 Reyes", "1 Crónicas", "2 Crónicas", "Esdras", "Nehemías", "Ester", "Job", "Salmos", "Proverbios", "Eclesiastés", "El", "Cantar de los Cantares", "Isaías", "Jeremías", "Lamentaciones", "Ezequiel", "Daniel", "Oseas", "Joel", "Amós", "Abdías", "Jonás", "Miqueas", "Nahúm", "Habacuc", "Sofonías", "Ageo", "Zacarías", "Malaquías",
 	"Mateo", "Marcos", "Lucas", "Juan", "Hechos", "Romanos", "1 Corintios", "2 Corintios", "Gálatas", "Efesios", "Filipenses", "Colosenses", "1", "Tesalonicenses", "2 Tesalonicenses", "1 Timoteo", "2 Timoteo", "Tito", "Filemón", "Hebreos", "Santiago", "1 Pedro", "2", "Pedro", "1 Juan", "2 Juan", "3 Juan", "Judas", "Apocalipsis"],
 	"elink": "/r4/lp-s/nwt/"
+	},
+	
+	{
+	"lang": "Swedish", "option": "sv",
+	"names": ["1 Moseboken", "2 Moseboken", "3 Moseboken", "4 Moseboken", "5 Moseboken", "Josua", "Domarboken", "Rut", "1 Samuelsboken", "2 Samuelsboken", "1 Kungaboken", "2 Kungaboken", "1 Krönikeboken", "2 Krönikeboken", "Esra", "Nehemja", "Ester", "Job", "Psalmerna", "Ordspråksboken", "Predikaren", "Höga visan", "Jesaja", "Jeremia", "Klagovisorna", "Hesekiel", "Daniel", "Hosea", "Joel", "Amos", "Obadja", "Jona", "Mika", "Nahum", "Habackuk", "Sefanja", "Haggaj", "Sakarja", "Malaki", 
+	"Matteus", "Markus", "Lukas", "Johannes", "Apostlagärningarna", "Romarna", "1 Korinthierna", "2 Korinthierna", "Galaterna", "Efesierna", "Filipperna", "Kolosserna", "1 Thessalonikerna", "2 Thessalonikerna", "1 Timoteus", "2 Timoteus", "Titus", "Filemon", "Hebréerna", "Jakob", "1 Petrus", "2 Petrus", "1 Johannes", "2 Johannes", "3 Johannes", "Judas", "Uppenbarelsebok",],
+	"elink": "/r14/lp-z/nwtsty/"
 	},
 	
 	{

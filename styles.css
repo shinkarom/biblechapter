@@ -1,2 +1,3 @@
 html { width: 70%; margin:auto; }
-select { height: 10em }
+#link { font-weight:bold; font-size:larger; }
+#link-container { display:flex;justify-content:center }
