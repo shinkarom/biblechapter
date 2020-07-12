@@ -104,7 +104,7 @@ function onSelClick(){
 	var link, n
 	link = "https://wol.jw.org/" + languages[lang].option + "/wol/b";
 	if(mode=="b") link+="inav";
-	link+=languages[lang].elink + book;
+	link+="/" + languages[lang].elink + "/" + book;
 	n = languages[lang].names[book-1];	
 	if(mode!="b"){
 		link += "/" + chapter;		
@@ -340,109 +340,138 @@ var chapters = [
 	*/
 	
 var languages = [
+	
+	{
+	"lang": "Afrikaans", "option": "af",
+	"names": ["Genesis", "Eksodus", "Levitikus", "Numeri", "Deuteronomium", "Josua", "Rigters", "Rut", "1 Samuel", "2 Samuel", "1 Konings", "2 Konings", "1 Kronieke", "2 Kronieke", "Esra", "Nehemia", "Ester", "Job", "Psalms", "Spreuke", "Prediker", "Hooglied van Salomo", "Jesaja", "Jeremia", "Klaagliedere", "Esegiël", "Daniël", "Hosea", "Joël", "Amos", "Obadja", "Jona", "Miga", "Nahum", "Habakuk", "Sefanja", "Haggai", "Sagaria", "Maleagi", 
+	"Matteus", "Markus", "Lukas", "Johannes", "Handelinge", "Romeine", "1 Korintiërs", "2 Korintiërs", "Galasiërs", "Efesiërs", "Filippense", "Kolossense", "1 Tessalonisense", "2 Tessalonisense", "1 Timoteus", "2 Timoteus", "Titus", "Filemon", "Hebreërs", "Jakobus", "1 Petrus", "2 Petrus", "1 Johannes", "2 Johannes", "3 Johannes", "Judas", "Openbaring"],
+	"elink": "r52/lp-af/nwt"
+	},	
+	
 	{
 	"lang": "Bulgarian","option":"bg",
 	"names": ["Битие", "Изход", "Левит", "Числа", "Второзаконие", "Исус Навиев", "Съдии", "Рут", "1 Царе", "2 Царе", "3 Царе", "4 Царе", "1 Летописи", "2 Летописи", "Ездра", "Неемия", "Естир", "Йов", "Псалми", "Притчи", "Еклисиаст", "Песен на песните", "Исаия", "Йеремия", "Плачът на Йеремия", "Езекиил", "Даниил", "Осия", "Йоил", "Амос", "Авдия", "Йона", "Михей", "Наум", "Авакум", "Софония", "Агей", "Захария", "Малахия", 
      "Матей", "Марко", "Лука", "Йоан", "Деяния", "Римляни", "1 Коринтяни", "2 Коринтяни", "Галатяни", "Ефесяни", "Филипяни", "Колосяни", "1 Солунци", "2 Солунци", "1 Тимотей", "2 Тимотей", "Тит", "Филимон", "Евреи", "Яков", "1 Петър", "2 Петър", "1 Йоан", "2 Йоан", "3 Йоан", "Юда", "Откровение"],
-	"elink": "/r46/lp-bl/bi12/"
+	"elink": "r46/lp-bl/bi12"
 	},
 	
 	{
 	"lang": "Danish", "option": "da",
 	"names": ["1. Mosebog", "2. Mosebog", "3. Mosebog", "4. Mosebog", "5. Mosebog", "Josva", "Dommerne", "Ruth", "1. Samuel", "2. Samuel", "1. Kongebog", "2. Kongebog", "1. Krønikebog", "2. Krønikebog", "Ezra", "Nehemias", "Ester", "Job", "Salmerne", "Ordsprogene", "Prædikeren", "Højsangen", "Esajas", "Jeremias", "Klagesangene", "Ezekiel", "Daniel", "Hoseas", "Joel", "Amos", "Obadias", "Jonas", "Mika", "Nahum", "Habakkuk", "Sefanias", "Haggaj", "Zakarias", "Malakias", 
 	"Matthæus", "Markus", "Lukas", "Johannes", "Apostlenes Gerninger", "Romerne", "1. Korinther", "2. Korinther", "Galaterne", "Efeserne", "Filipperne", "Kolossenserne", "1. Thessaloniker", "2. Thessaloniker", "1. Timotheus", "2. Timotheus", "Titus", "Filemon", "Hebræerne", "Jakob", "1. Peter", "2. Peter", "1. Johannes", "2. Johannes", "3. Johannes", "Judas", "Åbenbaringen", ],
-	"elink": "/r9/lp-d/nwtsty/"
+	"elink": "r9/lp-d/nwtsty"
 	},
 	
 	{
 	"lang": "English","option":"en",
 	"names":["Genesis","Exodus","Leviticus", "Numbers", "Deuteronomy", "Joshua", "Judges", "Ruth", "1 Samuel", "2 Samuel", "1 Kings", "2 Kings", "1 Chronicles", "2 Chronicles", "Ezra", "Nehemiah", "Esther", "Job", "Psalms", "Proverbs", "Ecclesiastes", "Song of Solomon", "Isaiah", "Jeremiah", "Lamentations", "Ezekiel", "Daniel", "Hosea", "Joel", "Amos", "Obadiah", "Jonah", "Micah", "Nahum", "Habakkuk", "Zephaniah", "Haggai", "Zechariah", "Malachi",
 	"Matthew", "Mark", "Luke", "John", "Acts", "Romans", "1 Corinthians", "2 Corinthians", "Galatians", "Ephesians", "Philippians", "Colossians", "1 Thessalonians", "2 Thessalonians", "1 Timothy", "2 Timothy", "Titus", "Philemon", "Hebrews", "James", "1 Peter", "2 Peter", "1 John", "2 John", "3 John", "Jude", "Revelation"],	
-	"elink":"/r1/lp-e/nwtsty/"
+	"elink":"r1/lp-e/nwtsty"
 	},
 	
 	{
 	"lang": "French", "option": "fr",
 	"names": ["Genèse", "Exode", "Lévitique", "Nombres", "Deutéronome", "Josué", "Juges", "Ruth", "1 Samuel", "2 Samuel", "1 Rois", "2 Rois", "1 Chroniques", "2 Chroniques", "Esdras", "Néhémie", "Esther", "Job", "Psaumes", "Proverbes", "Ecclésiaste", "Chant de Salomon", "Isaïe", "Jérémie", "Lamentations", "Ézéchiel", "Daniel", "Osée", "Joël", "Amos", "Abdias", "Jonas", "Michée", "Nahum", "Habacuc", "Sophonie", "Aggée", "Zacharie", "Malachie", 
 	"Matthieu", "Marc", "Luc", "Jean", "Actes", "Romains", "1 Corinthiens", "2 Corinthiens", "Galates", "Éphésiens", "Philippiens", "Colossiens", "1 Thessaloniciens", "2 Thessaloniciens", "1 Timothée", "2 Timothée", "Tite", "Philémon", "Hébreux", "Jacques", "1 Pierre", "2 Pierre", "1 Jean", "2 Jean", "3 Jean", "Jude", "Révélation"],
-	"elink": "/r30/lp-f/nwtsty/"
+	"elink": "r30/lp-f/nwtsty"
 	},
 	
 	{
 	"lang": "German", "option": "de",
 	"names": ["1. Mose", "2. Mose", "3. Mose", "4. Mose", "5. Mose", "Josua", "Richter", "Ruth", "1. Samuel", "2. Samuel", "1. Könige", "2. Könige", "1. Chronika", "2. Chronika", "Esra", "Nehemia", "Esther", "Hiob", "Psalmen", "Sprüche", "Prediger", "Hohes Lied", "Jesaja", "Jeremia", "Klagelieder", "Hesekiel", "Daniel", "Hosea", "Joel", "Amos", "Obadja", "Jona", "Micha", "Nahum", "Habakuk", "Zephanja", "Haggai", "Sacharja", "Maleachi", 
 	"Matthäus", "Markus", "Lukas", "Johannes", "Apostelgeschichte", "Römer", "1. Korinther", "2. Korinther", "Galater", "Epheser", "Philipper", "Kolosser", "1. Thessalonicher", "2. Thessalonicher", "1. Timotheus", "2. Timotheus", "Titus", "Philemon", "Hebräer", "Jakobus", "1. Petrus", "2. Petrus", "1. Johannes", "2. Johannes", "3. Johannes", "Judas", "Offenbarung"],
-	"elink": "/r10/lp-x/nwtsty/"
+	"elink": "r10/lp-x/nwtsty"
 	},
 	
 	{
 	"lang": "Dutch", "option": "nl",
 	"names": ["Genesis", "Exodus", "Leviticus", "Numeri", "Deuteronomium", "Jozua", "Rechters", "Ruth", "1 Samuël", "2 Samuël", "1 Koningen", "2 Koningen", "1 Kronieken", "2 Kronieken", "Ezra", "Nehemia", "Esther", "Job", "Psalmen", "Spreuken", "Prediker", "Hooglied", "Jesaja", "Jeremia", "Klaagliederen", "Ezechiël", "Daniël", "Hosea", "Joël", "Amos", "Obadja", "Jona", "Micha", "Nahum", "Habakuk", "Zefanja", "Haggaï", "Zacharia", "Maleachi", 
 	"Mattheüs", "Markus", "Lukas", "Johannes", "Handelingen", "Romeinen", "1 Korinthiërs", "2 Korinthiërs", "Galaten", "Efeziërs", "Filippenzen", "Kolossenzen", "1 Thessalonicenzen", "2 Thessalonicenzen", "1 Timotheüs", "2 Timotheüs", "Titus", "Filemon", "Hebreeën", "Jakobus", "1 Petrus", "2 Petrus", "1 Johannes", "2 Johannes", "3 Johannes", "Judas", "Openbaring"],
-	"elink": "/r18/lp-o/nwtsty/"
+	"elink": "r18/lp-o/nwtsty"
 	},
+	
+	{
+	"lang": "Indonesian", "option": "id",
+	"names": ["Kejadian", "Keluaran", "Imamat", "Bilangan", "Ulangan", "Yosua", "Hakim", "Rut", "1 Samuel", "2 Samuel", "1 Raja", "2 Raja", "1 Tawarikh", "2 Tawarikh", "Ezra", "Nehemia", "Ester", "Ayub", "Mazmur", "Amsal", "Pengkhotbah", "Kidung Agung", "Yesaya", "Yeremia", "Ratapan", "Yehezkiel", "Daniel", "Hosea", "Yoel", "Amos", "Obaja", "Yunus", "Mikha", "Nahum", "Habakuk", "Zefanya", "Hagai", "Zakharia", "Maleakhi",
+	"Matius", "Markus", "Lukas", "Yohanes", "Kisah", "Roma", "1 Korintus", "2 Korintus", "Galatia", "Efesus", "Filipi", "Kolose", "1 Tesalonika", "2 Tesalonika", "1 Timotius", "2 Timotius", "Titus", "Filemon", "Ibrani", "Yakobus", "1 Petrus", "2 Petrus", "1 Yohanes", "2 Yohanes", "3 Yohanes", "Yudas", "Wahyu"],
+	"elink": "r25/lp-in/nwtsty"
+	},	
 	
 	{
 	"lang": "Italian", "option": "it",
 	"names": ["Genesi", "Esodo", "Levitico", "Numeri", "Deuteronomio", "Giosuè", "Giudici", "Rut", "1 Samuele", "2 Samuele", "1 Re", "2 Re", "1 Cronache", "2 Cronache", "Esdra", "Neemia", "Ester", "Giobbe", "Salmi", "Proverbi", "Ecclesiaste", "Cantico", "dei Cantici", "Isaia", "Geremia", "Lamentazioni", "Ezechiele", "Daniele", "Osea", "Gioele", "Amos", "Abdia", "Giona", "Michea", "Naum", "Abacuc", "Sofonia", "Aggeo", "Zaccaria", "Malachia", 
 	"Matteo", "Marco", "Luca", "Giovanni", "Atti", "Romani", "1 Corinti", "2 Corinti", "Galati", "Efesini", "Filippesi", "Colossesi", "1 Tessalonicesi", "2 Tessalonicesi", "1 Timoteo", "2 Timoteo", "Tito", "Filemone", "Ebrei", "Giacomo", "1 Pietro", "2 Pietro", "1 Giovanni", "2 Giovanni", "3", "Giovanni", "Giuda", "Rivelazione",],
-	"elink": "/r6/lp-i/nwtsty/"
+	"elink": "r6/lp-i/nwtsty"
 	},
 	
 	{
 	"lang": "Japanese", "option":"ja",
 	"names": ["創世", "出エジプト", "レビ", "民数", "申命", "ヨシュア", "裁き人", "ルツ", "サムエル第一", "サムエル第二", "列王第一", "列王第二", "歴代第一", "歴代第二", "エズラ", "ネヘミヤ", "エステル", "ヨブ", "詩編", "格言", "伝道", "ソロモンの歌", "イザヤ", "エレミヤ", "哀歌", "エゼキエル", "ダニエル", "ホセア", "ヨエル", "アモス", "オバデヤ", "ヨナ", "ミカ", "ナホム", "ハバクク", "ゼパニヤ", "ハガイ", "ゼカリヤ", "マラキ", 
     "マタイ", "マルコ", "ルカ", "ヨハネ", "使徒", "ローマ", "コリント第一", "コリント第二", "ガラテア", "エフェソス", "フィリピ", "コロサイ", "テサロニケ第一", "テサロニケ第二", "テモテ第一", "テモテ第二", "テトス", "フィレモン", "ヘブライ", "ヤコブ", "ペテロ第一", "ペテロ第二", "ヨハネ第一", "ヨハネ第二", "ヨハネ第三", "ユダ", "啓示"],
-	"elink":"/r7/lp-j/nwtsty/"
+	"elink":"r7/lp-j/nwtsty"
 	},
+	
+	{
+	"lang": "Malay", "option": "ms",
+	"names": ["Kejadian", "Keluaran", "Imamat", "Bilangan", "Ulangan", "Yosua", "Hakim-Hakim", "Rut", "1 Samuel", "2 Samuel", "1 Raja-Raja", "2 Raja-Raja", "1 Tawarikh", "2 Tawarikh", "Ezra", "Nehemia", "Ester", "Ayub", "Mazmur", "Amsal", "Pengkhutbah", "Kidung Agung", "Yesaya", "Yeremia", "Ratapan", "Yehezkiel", "Daniel", "Hosea", "Yoel", "Amos", "Obaja", "Yunus", "Mikha", "Nahum", "Habakuk", "Zefanya", "Hagai", "Zakharia", "Maleakhi", 
+	"Matius", "Markus", "Lukas", "Yohanes", "Kisah", "Roma", "1 Korintus", "2 Korintus", "Galatia", "Efesus", "Filipi", "Kolose", "1 Tesalonika", "2 Tesalonika", "1 Timotius", "2 Timotius", "Titus", "Filemon", "Ibrani", "Yakobus", "1 Petrus", "2 Petrus", "1 Yohanes", "2 Yohanes", "3 Yohanes", "Yudas", "Wahyu"],
+	"elink": "r118/lp-ml/nwt"
+	},	
 	
 	{
 	"lang": "Norwegian", "option": "no",
 	"names": ["1. Mosebok", "2. Mosebok", "3. Mosebok", "4. Mosebok", "5. Mosebok", "Josva", "Dommerne", "Rut", "1. Samuelsbok", "2. Samuelsbok", "1. Kongebok", "2. Kongebok", "1. Krønikebok", "2. Krønikebok", "Esra", "Nehemja", "Ester", "Job", "Salmene", "Ordspråkene", "Forkynneren", "Høysangen", "Jesaja", "Jeremia", "Klagesangene", "Esekiel", "Daniel", "Hosea", "Joel", "Amos", "Obadja", "Jona", "Mika", "Nahum", "Habakkuk", "Sefanja", "Haggai", "Sakarja", "Malaki", 
 	"Matteus", "Markus", "Lukas", "Johannes", "Apostlenes gjerninger", "Romerne", "1. Korinter", "2. Korinter", "Galaterne", "Efeserne", "Filipperne", "Kolosserne", "1. Tessaloniker", "2. Tessaloniker", "1. Timoteus", "2. Timoteus", "Titus", "Filemon", "Hebreerne", "Jakob", "1. Peter", "2. Peter", "1. Johannes", "2. Johannes", "3. Johannes", "Judas", "Åpenbaringen", ],
-	"elink": "/r3/lp-n/nwtsty/"
+	"elink": "r3/lp-n/nwtsty"
 	},	
 	
 	{
 	"lang":"Polish", "option":"pl",
 	"names": ["Rodzaju", "Wyjścia", "Kapłańska", "Liczb", "Powtórzonego Prawa", "Jozuego", "Sędziów", "Rut", "1 Samuela", "2 Samuela", "1 Królów", "2 Królów", "1 Kronik", "2 Kronik", "Ezdrasza", "Nehemiasza", "Estery", "Hioba", "Psalmy", "Przysłów", "Kaznodziei", "Pieśń", "Izajasza", "Jeremiasza", "Lamentacje", "Ezechiela", "Daniela", "Ozeasza", "Joela", "Amosa", "Abdiasza", "Jonasza", "Micheasza", "Nahuma", "Habakuka", "Sofoniasza", "Aggeusza", "Zachariasza", "Malachiasza",
     "Mateusza", "Marka", "Łukasza", "Jana", "Dzieje", "Rzymian", "1 Koryntian", "2 Koryntian", "Galatów", "Efezjan", "Filipian", "Kolosan", "1 Tesaloniczan", "2 Tesaloniczan", "1 Tymoteusza", "2 Tymoteusza", "Tytusa", "Filemona", "Hebrajczyków", "Jakuba", "1 Piotra", "2 Piotra", "1 Jana", "2 Jana", "3 Jana", "Judy", "Objawienie"],
-	"elink":"/r12/lp-p/nwtsty/"
+	"elink":"r12/lp-p/nwtsty"
 	},
 	
 	{
 	"lang": "Portuguese", "option": "pt",
 	"names": ["Gênesis", "Êxodo", "Levítico", "Números", "Deuteronômio", "Josué", "Juízes", "Rute", "1 Samuel", "2 Samuel", "1 Reis", "2 Reis", "1 Crônicas", "2 Crônicas", "Esdras", "Neemias", "Ester", "Jó", "Salmos", "Provérbios", "Eclesiastes", "Cântico de Salomão", "Isaías", "Jeremias", "Lamentações", "Ezequiel", "Daniel", "Oseias", "Joel", "Amós", "Obadias", "Jonas", "Miqueias", "Naum", "Habacuque", "Sofonias", "Ageu", "Zacarias", "Malaquias", 
 	"Mateus", "Marcos", "Lucas", "João", "Atos", "Romanos", "1 Coríntios", "2 Coríntios", "Gálatas", "Efésios", "Filipenses", "Colossenses", "1 Tessalonicenses", "2 Tessalonicenses", "1 Timóteo", "2 Timóteo", "Tito", "Filêmon", "Hebreus", "Tiago", "1 Pedro", "2 Pedro", "1 João", "2", "João", "3 João", "Judas", "Apocalipse"],
-	"elink": "/r5/lp-t/nwtsty/"
+	"elink": "r5/lp-t/nwtsty"
 	},	
 	
 	{
 	"lang": "Russian", "option": "ru",
 	"names": ["Бытие","Исход","Левит","Числа","Второзаконие","Иисус Навин","Судей","Руфь","1 Самуила","2 Самуила","1 Царей","2 Царей","1 Летопись","2 Летопись","Ездра","Неемия","Эсфирь","Иов","Псалмы","Притчи","Экклезиаст","Песнь песней","Исаия","Иеремия","Плач Иеремии","Иезекииль","Даниил","Осия","Иоиль","Амос","Авдий","Иона","Михей","Наум","Аввакум","Софония","Аггей","Захария","Малахия",
 	"Матфея","Марка","Луки","Иоанна","Деяния","Римлянам","1 Коринфянам","2 Коринфянам","Галатам","Эфесянам","Филиппийцам","Колоссянам","1 Фессалоникийцам","2 Фессалоникийцам","1 Тимофею","2 Тимофею","Титу","Филимону","Евреям","Иакова","1 Петра","2 Петра","1 Иоанна","2 Иоанна","3 Иоанна","Иуды","Откровение"],
-	"elink":"/r2/lp-u/bi12/"
+	"elink":"r2/lp-u/bi12"
 	},
 	
 	{
 	"lang": "Spanish", "option": "es",
 	"names": ["Génesis", "Éxodo", "Levítico", "Números", "Deuteronomio", "Josué", "Jueces", "Rut", "1 Samuel", "2 Samuel", "1 Reyes", "2 Reyes", "1 Crónicas", "2 Crónicas", "Esdras", "Nehemías", "Ester", "Job", "Salmos", "Proverbios", "Eclesiastés", "El", "Cantar de los Cantares", "Isaías", "Jeremías", "Lamentaciones", "Ezequiel", "Daniel", "Oseas", "Joel", "Amós", "Abdías", "Jonás", "Miqueas", "Nahúm", "Habacuc", "Sofonías", "Ageo", "Zacarías", "Malaquías",
 	"Mateo", "Marcos", "Lucas", "Juan", "Hechos", "Romanos", "1 Corintios", "2 Corintios", "Gálatas", "Efesios", "Filipenses", "Colosenses", "1", "Tesalonicenses", "2 Tesalonicenses", "1 Timoteo", "2 Timoteo", "Tito", "Filemón", "Hebreos", "Santiago", "1 Pedro", "2", "Pedro", "1 Juan", "2 Juan", "3 Juan", "Judas", "Apocalipsis"],
-	"elink": "/r4/lp-s/nwt/"
+	"elink": "r4/lp-s/nwt"
 	},
+	
+	{
+	"lang": "Swahili", "option": "sw",
+	"names": ["Mwanzo", "Kutoka", "Mambo ya Walawi", "Hesabu", "Kumbukumbu la Torati", "Yoshua", "Waamuzi", "Ruthu", "1 Samweli", "2 Samweli", "1 Wafalme", "2 Wafalme", "1 Mambo ya Nyakati", "2 Mambo ya Nyakati", "Ezra", "Nehemia", "Esta", "Ayubu", "Zaburi", "Methali", "Mhubiri", "Wimbo wa Sulemani", "Isaya", "Yeremia", "Maombolezo", "Ezekieli", "Danieli", "Hosea", "Yoeli", "Amosi", "Obadia", "Yona", "Mika", "Nahumu", "Habakuki", "Sefania", "Hagai", "Zekaria", "Malaki",
+	"Mathayo", "Marko", "Luka", "Yohana", "Matendo", "Waroma", "1 Wakorintho", "2 Wakorintho", "Wagalatia", "Waefeso", "Wafilipi", "Wakolosai", "1 Wathesalonike", "2 Wathesalonike", "1 Timotheo", "2 Timotheo", "Tito", "Filemoni", "Waebrania", "Yakobo", "1 Petro", "2 Petro", "1 Yohana", "2 Yohana", "3 Yohana", "Yuda",  "Ufunuo"],
+	"elink": "r13/lp-sw/nwt"
+	},	
 	
 	{
 	"lang": "Swedish", "option": "sv",
 	"names": ["1 Moseboken", "2 Moseboken", "3 Moseboken", "4 Moseboken", "5 Moseboken", "Josua", "Domarboken", "Rut", "1 Samuelsboken", "2 Samuelsboken", "1 Kungaboken", "2 Kungaboken", "1 Krönikeboken", "2 Krönikeboken", "Esra", "Nehemja", "Ester", "Job", "Psalmerna", "Ordspråksboken", "Predikaren", "Höga visan", "Jesaja", "Jeremia", "Klagovisorna", "Hesekiel", "Daniel", "Hosea", "Joel", "Amos", "Obadja", "Jona", "Mika", "Nahum", "Habackuk", "Sefanja", "Haggaj", "Sakarja", "Malaki", 
 	"Matteus", "Markus", "Lukas", "Johannes", "Apostlagärningarna", "Romarna", "1 Korinthierna", "2 Korinthierna", "Galaterna", "Efesierna", "Filipperna", "Kolosserna", "1 Thessalonikerna", "2 Thessalonikerna", "1 Timoteus", "2 Timoteus", "Titus", "Filemon", "Hebréerna", "Jakob", "1 Petrus", "2 Petrus", "1 Johannes", "2 Johannes", "3 Johannes", "Judas", "Uppenbarelsebok",],
-	"elink": "/r14/lp-z/nwtsty/"
+	"elink": "r14/lp-z/nwtsty"
 	},
 	
 	{
 	"lang":"Ukrainian","option":"uk",
 	"names":["Буття", "Вихід", "Левіт", "Числа", "Повторення Закону", "Ісуса Навина", "Суддів", "Рут", "1 Самуїла", "2 Самуїла", "1 Царів", "2 Царів", "1 Хронік", "2 Хронік", "Ездри", "Неемії", "Естер", "Йова", "Псалми", "Прислів’я", "Екклезіаста", "Пісня над піснями", "Ісаї", "Єремії", "Плач Єремії", "Єзекіїля", "Даниїла", "Осії", "Йоіла", "Амоса", "Овдія", "Йони", "Михея", "Наума", "Авакума", "Софонії", "Огія", "Захарія", "Малахії", 
     "Матвія", "Марка", "Луки", "Івана", "Дії", "Римлян", "1 Коринфян", "2 Коринфян", "Галатів", "Ефесян", "Філіппійців", "Колоссян", "1 Фессалонікійців", "2 Фессалонікійців", "1 Тимофія", "2 Тимофія", "Тита", "Филимона", "Євреїв", "Якова", "1 Петра", "2 Петра", "1 Івана", "2", "Івана", "3 Івана", "Юди", "Об’явлення"],
-	"elink":"/r15/lp-k/nwtsty/"
+	"elink":"r15/lp-k/nwtsty"
 	}
 	]
 	
