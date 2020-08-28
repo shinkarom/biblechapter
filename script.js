@@ -356,11 +356,39 @@ var languages = [
 	},
 	
 	{
+	"lang": "Czech", "option":"cs",
+	"names": ["1. Mojžíšova", "2. Mojžíšova", "3. Mojžíšova", "4. Mojžíšova", "5. Mojžíšova", "Jozue", "Soudci", "Rut", "1. Samuelova", "2. Samuelova", "1. Královská", "2. Královská", "1. Paralipomenon", "2. Paralipomenon", "Ezra", "Nehemjáš", "Ester", "Job", "Žalmy", "Přísloví", "Kazatel", "Šalomounova píseň", "Izajáš", "Jeremjáš", "Nářky", "Ezekiel", "Daniel", "Ozeáš", "Joel", "Amos", "Obadjáš", "Jonáš", "Micheáš", "Nahum", "Habakuk", "Sefanjáš", "Ageus", "Zecharjáš", "Malachiáš",
+	"Matouš", "Marek", "Lukáš", "Jan", "Skutky", "Římanům", "1. Korinťanům", "2. Korinťanům", "Galaťanům", "Efezanům", "Filipanům", "Kolosanům", "1. Tesaloničanům", "2. Tesaloničanům", "1. Timoteovi", "2. Timoteovi", "Titovi", "Filemonovi", "Hebrejcům", "Jakub", "1. Petra", "2. Petra", "1. Jana", "2. Jana", "3. Jana", "Juda", "Zjevení"],
+	"elink": "r29/lp-b/nwt"
+	},
+	
+	{
+	"lang": "Chinese (Simplified)", "option": "cmn-Hans",
+	"names": ["创世记", "出埃及记", "利未记", "民数记", "申命记", "约书亚记", "士师记", "路得记", "撒母耳记上", "撒母耳记下", "列王纪上", "列王纪下", "历代志上", "历代志下", "以斯拉记", "尼希米记", "以斯帖记", "约伯记", "诗篇", "箴言", "传道书", "雅歌", "以赛亚书", "耶利米书", "耶利米哀歌", "以西结书", "但以理书", "何西阿书", "约珥书", "阿摩司书", "俄巴底亚书", "约拿书", "弥迦书", "那鸿书", "哈巴谷书", "西番雅书", "哈该书", "撒迦利亚书", "玛拉基书", 
+	"马太福音", "马可福音", "路加福音", "约翰福音", "使徒行传", "罗马书", "哥林多前书", "哥林多后书", "加拉太书", "以弗所书", "腓立比书", "歌罗西书", "帖撒罗尼迦前书", "帖撒罗尼迦后书", "提摩太前书", "提摩太后书", "提多书", "腓利门书", "希伯来书", "雅各书", "彼得前书", "彼得后书", "约翰一书", "约翰二书", "约翰三书", "犹大书", "启示录"],
+	"elink": "r23/lp-chs/nwt"
+	},	
+
+	{
+	"lang": "Chinese (Traditional)", "option": "cmn-Hant",
+	"names": ["創世記", "出埃及記", "利未記", "民數記", "申命記", "約書亞記", "士師記", "路得記", "撒母耳記上", "撒母耳記下", "列王紀上", "列王紀下", "歷代志上", "歷代志下", "以斯拉記", "尼希米記", "以斯帖記", "約伯記", "詩篇", "箴言", "傳道書", "雅歌", "以賽亞書", "耶利米書", "耶利米哀歌", "以西結書", "但以理書", "何西阿書", "約珥書", "阿摩司書", "俄巴底亞書", "約拿書", "彌迦書", "那鴻書", "哈巴谷書", "西番雅書", "哈該書", "撒迦利亞書", "瑪拉基書", 
+	"馬太福音", "馬可福音", "路加福音", "約翰福音", "使徒行傳", "羅馬書", "哥林多前書", "哥林多後書", "加拉太書", "以弗所書", "腓立比書", "歌羅西書", "帖撒羅尼迦前書", "帖撒羅尼迦後書", "提摩太前書", "提摩太後書", "提多書", "腓利門書", "希伯來書", "雅各書", "彼得前書", "彼得後書", "約翰一書", "約翰二書", "約翰三書", "猶大書", "啟示錄"],
+	"elink": "r24/lp-ch/nwt"
+	},		
+	
+	{
 	"lang": "Danish", "option": "da",
 	"names": ["1. Mosebog", "2. Mosebog", "3. Mosebog", "4. Mosebog", "5. Mosebog", "Josva", "Dommerne", "Ruth", "1. Samuel", "2. Samuel", "1. Kongebog", "2. Kongebog", "1. Krønikebog", "2. Krønikebog", "Ezra", "Nehemias", "Ester", "Job", "Salmerne", "Ordsprogene", "Prædikeren", "Højsangen", "Esajas", "Jeremias", "Klagesangene", "Ezekiel", "Daniel", "Hoseas", "Joel", "Amos", "Obadias", "Jonas", "Mika", "Nahum", "Habakkuk", "Sefanias", "Haggaj", "Zakarias", "Malakias", 
 	"Matthæus", "Markus", "Lukas", "Johannes", "Apostlenes Gerninger", "Romerne", "1. Korinther", "2. Korinther", "Galaterne", "Efeserne", "Filipperne", "Kolossenserne", "1. Thessaloniker", "2. Thessaloniker", "1. Timotheus", "2. Timotheus", "Titus", "Filemon", "Hebræerne", "Jakob", "1. Peter", "2. Peter", "1. Johannes", "2. Johannes", "3. Johannes", "Judas", "Åbenbaringen", ],
 	"elink": "r9/lp-d/nwtsty"
 	},
+	
+	{
+	"lang": "Dutch", "option": "nl",
+	"names": ["Genesis", "Exodus", "Leviticus", "Numeri", "Deuteronomium", "Jozua", "Rechters", "Ruth", "1 Samuël", "2 Samuël", "1 Koningen", "2 Koningen", "1 Kronieken", "2 Kronieken", "Ezra", "Nehemia", "Esther", "Job", "Psalmen", "Spreuken", "Prediker", "Hooglied", "Jesaja", "Jeremia", "Klaagliederen", "Ezechiël", "Daniël", "Hosea", "Joël", "Amos", "Obadja", "Jona", "Micha", "Nahum", "Habakuk", "Zefanja", "Haggaï", "Zacharia", "Maleachi", 
+	"Mattheüs", "Markus", "Lukas", "Johannes", "Handelingen", "Romeinen", "1 Korinthiërs", "2 Korinthiërs", "Galaten", "Efeziërs", "Filippenzen", "Kolossenzen", "1 Thessalonicenzen", "2 Thessalonicenzen", "1 Timotheüs", "2 Timotheüs", "Titus", "Filemon", "Hebreeën", "Jakobus", "1 Petrus", "2 Petrus", "1 Johannes", "2 Johannes", "3 Johannes", "Judas", "Openbaring"],
+	"elink": "r18/lp-o/nwtsty"
+	},	
 	
 	{
 	"lang": "English","option":"en",
@@ -384,13 +412,6 @@ var languages = [
 	},
 	
 	{
-	"lang": "Dutch", "option": "nl",
-	"names": ["Genesis", "Exodus", "Leviticus", "Numeri", "Deuteronomium", "Jozua", "Rechters", "Ruth", "1 Samuël", "2 Samuël", "1 Koningen", "2 Koningen", "1 Kronieken", "2 Kronieken", "Ezra", "Nehemia", "Esther", "Job", "Psalmen", "Spreuken", "Prediker", "Hooglied", "Jesaja", "Jeremia", "Klaagliederen", "Ezechiël", "Daniël", "Hosea", "Joël", "Amos", "Obadja", "Jona", "Micha", "Nahum", "Habakuk", "Zefanja", "Haggaï", "Zacharia", "Maleachi", 
-	"Mattheüs", "Markus", "Lukas", "Johannes", "Handelingen", "Romeinen", "1 Korinthiërs", "2 Korinthiërs", "Galaten", "Efeziërs", "Filippenzen", "Kolossenzen", "1 Thessalonicenzen", "2 Thessalonicenzen", "1 Timotheüs", "2 Timotheüs", "Titus", "Filemon", "Hebreeën", "Jakobus", "1 Petrus", "2 Petrus", "1 Johannes", "2 Johannes", "3 Johannes", "Judas", "Openbaring"],
-	"elink": "r18/lp-o/nwtsty"
-	},
-	
-	{
 	"lang": "Indonesian", "option": "id",
 	"names": ["Kejadian", "Keluaran", "Imamat", "Bilangan", "Ulangan", "Yosua", "Hakim", "Rut", "1 Samuel", "2 Samuel", "1 Raja", "2 Raja", "1 Tawarikh", "2 Tawarikh", "Ezra", "Nehemia", "Ester", "Ayub", "Mazmur", "Amsal", "Pengkhotbah", "Kidung Agung", "Yesaya", "Yeremia", "Ratapan", "Yehezkiel", "Daniel", "Hosea", "Yoel", "Amos", "Obaja", "Yunus", "Mikha", "Nahum", "Habakuk", "Zefanya", "Hagai", "Zakharia", "Maleakhi",
 	"Matius", "Markus", "Lukas", "Yohanes", "Kisah", "Roma", "1 Korintus", "2 Korintus", "Galatia", "Efesus", "Filipi", "Kolose", "1 Tesalonika", "2 Tesalonika", "1 Timotius", "2 Timotius", "Titus", "Filemon", "Ibrani", "Yakobus", "1 Petrus", "2 Petrus", "1 Yohanes", "2 Yohanes", "3 Yohanes", "Yudas", "Wahyu"],
@@ -410,6 +431,13 @@ var languages = [
     "マタイ", "マルコ", "ルカ", "ヨハネ", "使徒", "ローマ", "コリント第一", "コリント第二", "ガラテア", "エフェソス", "フィリピ", "コロサイ", "テサロニケ第一", "テサロニケ第二", "テモテ第一", "テモテ第二", "テトス", "フィレモン", "ヘブライ", "ヤコブ", "ペテロ第一", "ペテロ第二", "ヨハネ第一", "ヨハネ第二", "ヨハネ第三", "ユダ", "啓示"],
 	"elink":"r7/lp-j/nwtsty"
 	},
+	
+	{
+	"lang": "Korean", "option": "ko",
+	"names": ["창세기", "출애굽기", "레위기", "민수기", "신명기", "여호수아", "사사기", "룻기", "사무엘상", "사무엘하", "열왕기상", "열왕기하", "역대기상", "역대기하", "에스라", "느헤미야", "에스더", "욥기", "시편", "잠언", "전도서", "솔로몬의 노래", "이사야", "예레미야", "예레미야 애가", "에스겔", "다니엘", "호세아", "요엘", "아모스", "오바댜", "요나", "미가", "나훔", "하박국", "스바냐", "학개", "스가랴", "말라기", 
+	"마태복음", "마가복음", "누가복음", "요한복음", "사도행전", "로마서", "고린도 전서", "고린도 후서", "갈라디아서", "에베소서", "빌립보서", "골로새서", "데살로니가 전서", "데살로니가 후서", "디모데 전서", "디모데 후서", "디도서", "빌레몬서", "히브리서", "야고보서", "베드로 전서", "베드로 후서", "요한 1서", "요한 2서", "요한 3서", "유다서", "요한 계시록"],
+	"elink": "r8/lp-ko/nwtsty"
+	},	
 	
 	{
 	"lang": "Malay", "option": "ms",
@@ -444,6 +472,20 @@ var languages = [
 	"names": ["Бытие","Исход","Левит","Числа","Второзаконие","Иисус Навин","Судей","Руфь","1 Самуила","2 Самуила","1 Царей","2 Царей","1 Летопись","2 Летопись","Ездра","Неемия","Эсфирь","Иов","Псалмы","Притчи","Экклезиаст","Песнь песней","Исаия","Иеремия","Плач Иеремии","Иезекииль","Даниил","Осия","Иоиль","Амос","Авдий","Иона","Михей","Наум","Аввакум","Софония","Аггей","Захария","Малахия",
 	"Матфея","Марка","Луки","Иоанна","Деяния","Римлянам","1 Коринфянам","2 Коринфянам","Галатам","Эфесянам","Филиппийцам","Колоссянам","1 Фессалоникийцам","2 Фессалоникийцам","1 Тимофею","2 Тимофею","Титу","Филимону","Евреям","Иакова","1 Петра","2 Петра","1 Иоанна","2 Иоанна","3 Иоанна","Иуды","Откровение"],
 	"elink":"r2/lp-u/bi12"
+	},
+	
+	{
+	"lang": "Slovak", "option": "sk",
+	"names": ["1. Mojžišova", "2. Mojžišova", "3. Mojžišova", "4. Mojžišova", "5. Mojžišova", "Jozua", "Sudcovia", "Rút", "1. Samuelova", "2. Samuelova", "1. Kráľov", "2. Kráľov", "1. Kroník", "2. Kroník", "Ezdráš", "Nehemiáš", "Ester", "Jób", "Kniha žalmov", "Príslovia", "Kazateľ", "Šalamúnova pieseň", "Izaiáš", "Jeremiáš", "Plač Jeremiáša", "Ezechiel", "Daniel", "Ozeáš", "Joel", "Amos", "Abdiáš", "Jonáš", "Micheáš", "Náhum", "Habakuk", "Sofoniáš", "Aggeus", "Zachariáš", "Malachiáš", 
+	"Matúš", "Marek", "Lukáš", "Ján", "Skutky", "Rimanom", "1. Korinťanom", "2. Korinťanom", "Galaťanom", "Efezanom", "Filipanom", "Kolosanom", "1. Tesaloničanom", "2. Tesaloničanom", "1. Timotejovi", "2. Timotejovi", "Títovi", "Filemonovi", "Hebrejom", "Jakub", "1. Petra", "2. Petra", "1. Jána", "2. Jána", "3. Jána", "Júda", "Zjavenie"],
+	"elink": "r38/lp-v/nwt"
+	},
+	
+	{
+	"lang": "Slovene", "option": "sl",
+	"names": ["1. Mojzesova", "2. Mojzesova", "3. Mojzesova", "4. Mojzesova", "5. Mojzesova", "Jozue", "Sodniki", "Ruta", "1. Samuelova", "2. Samuelova", "1. kraljev", "2. kraljev", "1. kroniška", "2. kroniška", "Ezra", "Nehemija", "Estera", "Job", "Psalmi", "Pregovori", "Pridigar", "Visoka pesem", "Izaija", "Jeremija", "Žalostinke", "Ezekiel", "Daniel", "Ozej", "Joel", "Amos", "Obadija", "Jona", "Miha", "Nahum", "Habakuk", "Zefanija", "Hagaj", "Zaharija", "Malahija", 
+	"Matej", "Marko", "Luka", "Janez", "Apostolska dela", "Rimljanom", "1. Korinčanom", "2. Korinčanom", "Galačanom", "Efežanom", "Filipljanom", "Kološanom", "1. Tesaloničanom", "2. Tesaloničanom", "1. Timoteju", "2. Timoteju", "Titu", "Filemonu", "Hebrejcem", "Jakob", "1. Petrovo", "2. Petrovo", "1. Janezovo", "2. Janezovo", "3. Janezovo", "Juda", "Razodetje"],
+	"elink": "r64/lp-sv/bi12"
 	},
 	
 	{
