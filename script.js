@@ -3,6 +3,7 @@ var lang = 0
 var book = 1
 var chapter = 1
 var verse = 1
+var hreflink = ""
 
 function randomInt(minn, maxn) {
 	return Math.floor(Math.random()*(maxn-minn))+minn;
@@ -114,8 +115,12 @@ function onSelClick(){
 			n += ":" + verse;
 		}		
 	}
-	document.querySelector("#link").href = link;
-	document.querySelector("#link").innerText = n;
+	hreflink = link;
+	document.querySelector("#item").innerText = n;
+}
+
+function onOpenClick(){
+	window.open(hreflink, "_blank").focus();
 }
 
 function onModeChange(){
@@ -165,6 +170,7 @@ function bodyLoad(){
 	populateLangs();
 	calculateTotals();
 	document.querySelector("#sel").addEventListener("click", onSelClick);
+	document.querySelector("#open").addEventListener("click", onOpenClick);
 	document.querySelector("#langs").addEventListener("change", onLangsChange);
 	document.querySelector("#mode").addEventListener("change", onModeChange);
 	onLangsChange();
